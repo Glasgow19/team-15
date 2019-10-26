@@ -20,7 +20,8 @@ public class Quiz {
 	ResourceLoader resourceLoader;
 	
 	@RequestMapping("/quiz")
-	public List<Question> readQuestions() {
+	public List<Question> readQuestions() 
+	{
 		List<Question> questions = new ArrayList<Question>();
 		try {
 			byte[] content = resourceLoader.getResource("classpath:data/questions.json").getInputStream().readAllBytes();
