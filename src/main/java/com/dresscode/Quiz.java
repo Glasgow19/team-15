@@ -17,7 +17,7 @@ public class Quiz {
 	ResourceLoader resourceLoader;
 	public int count ; 
 	public Quiz(){
-		count = -1 ;
+		count = 0 ;
 	}
 	public Question readQuestions() 
 	{
@@ -31,8 +31,14 @@ public class Quiz {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}count++ ;
-		return questions.get(count) ;
-		
+		}
+		return questions.get(count) ;	
+	}
+	public int getCount() {
+		int c = count ;
+		count++ ;
+		if(count == 5)
+			count = 0 ;
+		return c ;
 	}
 }

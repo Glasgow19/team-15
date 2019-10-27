@@ -1,0 +1,52 @@
+<html xmlns:th="http://www.thymeleaf.org"> 
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+		function checkCheckedBox(Inter_res) {
+			URL = "/quizComp"
+			
+		  	var checkBox = document.getElementById("myCheck");	
+			  if (checkBox.checked == true){
+		  } else {
+		    		text.style.display = "Please Enter a Value";
+		  }
+		}
+	</script>
+	<script>
+		function ButtonClicked(){
+			
+			var xhttp = new XMLHttpRequest();
+			xhttp.open("POST", "/quizComp?result=", true);
+			xhttp.send();
+			console.log(xhttp.response);
+		}
+	</script>
+</head>
+
+<body style = "background-color :#eaeaea ;" border = "Border-style : solid ; Border-width : 3px  ; Border-Left : 10px ; Border-Right : 10px ; Border-color = purple">
+<form action="/quizComp" method="post">
+<h3>"Let's Start the Quiz, Shall we ?"</h3><p th:text="${Question}" /> 
+<label class="container">
+  <input type="checkbox" id="myCheck" onclick = "CheckCheckedBox("${Answer1}")" >
+  <p th:text="${Answers1}" /> 
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">
+<input type="checkbox" id="myCheck" onclick = "CheckCheckedBox("${Answer2}")" > <p th:text="${Answers2}" /> 
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">
+<input type="checkbox" id="myCheck" onclick = "CheckCheckedBox("${Answer3}")">
+<p th:text="${Answers3}" /> 
+  <span class="checkmark"></span>
+</label>
+	
+<button type="submit">Submit</button>
+</form>
+<button onclick = "ButtonClicked()">Next Question</button>
+<button>Next Question</button>
+</body>
+</html>
