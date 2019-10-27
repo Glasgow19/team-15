@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class musicController {
-	@GetMapping("/music")
+	@GetMapping("/home/subjects/music")
 	public String index() {
 		return "music";
 	}
