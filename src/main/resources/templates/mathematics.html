@@ -3,101 +3,197 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-* {box-sizing: border-box}
-body {font-family: "Lucida Console", Monaco, monospace;}
+* {
+	box-sizing: border-box
+}
+
+body {
+	font-family: "Lucida Console", Monaco, monospace;
+}
 
 /* Style the tab */
 .tab {
-  float: Left;
-  border: 1px solid #A7358C;
-  background-color: #A7358C;
-  width: 30%;
-  height: 800px;
+	float: Left;
+	background-color: #A7358C;
+	width: 30%;
+	height: 800px;
 }
 
 /* Style the buttons inside the tab */
 .tab button {
-  display: block;
-  background-color: #A7358C;
-  color: white;
-  padding: 22px 16px;
-  width: 100%;
-  border: none;
-  outline: none;
-  text-align: left;
-  cursor: pointer;
-  font-size: 17px;
+	display: block;
+	background-color: #A7358C;
+	color: white;
+	padding: 22px 16px;
+	width: 100%;
+	border: none;
+	outline: none;
+	text-align: left;
+	cursor: pointer;
+	font-size: 17px;
+	font-family: "Lucida Console", Monaco, monospace;
 }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  background-color: #A7358C;
+	background-color: #A7358C;
 }
 
 /* Create an active/current "tab button" class */
 .tab button.active {
-  background-color: #74529E;
+	background-color: #74529E;
 }
 
 /* Style the tab content */
 .tabcontent {
-  float: left;
-  padding: 0px 12px;
-  border: 1px solid #A7358C;
-  width: 70%;
-  border-left: none;
-  height: 800px;
-  display: none;
+	float: left;
+	padding: 0px 12px;
+	width: 70%;
+	border-left: none;
+	height: 800px;
+	background: #eaeaea;
+	display: none;
 }
 
 /* Clear floats after the tab */
 .clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.body-container {
+	border: 2.5px solid #A7358C;
+	border-radius: 5px;
 }
 </style>
 </head>
 <body>
+	<div class=body-container>
+		<div class="tab">
+			<button class="tablinks"
+				onmouseover="openFunction(event, 'Articles')">Articles</button>
+			<button class="tablinks"
+				onmouseover="openFunction(event, 'Websites')">Websites</button>
+			<button class="tablinks" onmouseover="openFunction(event, 'Videos')">Videos</button>
+		</div>
 
-<div class="tab">
-  <button class="tablinks" onmouseover="openFunction(event, 'Articles')">Articles</button>
-  <button class="tablinks" onmouseover="openFunction(event, 'Websites')">Websites</button>
-  <button class="tablinks" onmouseover="openFunction(event, 'Videos')">Videos</button>
-</div>
+		<div id="Articles" class="tabcontent">
+			<h3>Articles</h3>
 
-<div id="Articles" class="tabcontent">
-  <h3>Articles</h3>
-  <p></p>
-</div>
+			<div class="row" style="padding: 20">
+				<div class="col-sm-4">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">The Relationship Between Mathematics
+								and Technology</h5>
+							<p class="card-text">There are some great ways to link
+								computing and all the other subjects on the school curriculum,
+								but there’s a particularly strong argument for making
+								connections with mathematics.</p>
+							<a
+								href="http://milesberry.net/2016/01/making-the-links-between-computing-and-mathematics/"
+								style="background-color: #eaeaea">Read more</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">What Links Mathematics and Computer
+								Science?</h5>
+							<p class="card-text">This article covers the different
+								approaches for each field and how both approaches are quite
+								similar and need similar ways of thinking.</p>
+							<a
+								href="https://www.superprof.co.uk/blog/maths-help-with-computers/"
+								style="background-color: #eaeaea">Read more</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">The Intersection between Mathematics
+								and Technology</h5>
+							<p class="card-text">This article highlights the ways
+								mathematics and technology are related as well as the ways they
+								work together</p>
+							<a
+								href="https://politicaleconomyzone.wordpress.com/2017/02/10/the-relationship-between-computer-science-and-mathematics/"
+								class="btn btn-primary" style="background-color: #eaeaea">Read
+								1 more</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			</p>
+		</div>
 
-<div id="Websites" class="tabcontent">
-  <h3>Websites</h3>
-  <p></p> 
-</div>
+		<div id="Websites" class="tabcontent">
+			<h3>Websites</h3>
+			<p>
+			<div class="row" style="padding: 20">
+				<div class="col-sm-4">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">"< code_by_math >"</h5>
+							<p class="card-text">This site was created as a place for
+								people to explore mathematics in the context of writing simple
+								computer programs..</p>
+							<a href="https://www.codebymath.com/"
+								style="background-color: #eaeaea">Read more</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Udacity</h5>
+							<p class="card-text">Not only does this website offer courses
+								for many different programming languages, but it also offers
+								careers advice and has a careers path for trainees to follow!</p>
+							<a href="https://www.udacity.com/"
+								style="background-color: #eaeaea">Read more</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-<div id="Videos" class="tabcontent">
-  <h3>Videos</h3>
-  <p></p>
-</div>
+		<div id="Videos" class="tabcontent">
+			<h3>Videos</h3>
+			<p>
+				<
+				<iframe width="250" height="250"
+					src="https://www.youtube.com/embed/qT8NyyRgLDQ" frameborder="0"
+					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
 
-<div class="clearfix"></div>
+				<iframe width="250" height="250"
+					src="https://www.youtube.com/embed/4TI2d5AugmE" frameborder="0"
+					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe>
+			</p>
+		</div>
 
-<script>
-function openFunction(evt, functionName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(functionName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-</script>
-   
+		<div class="clearfix"></div>
+
+		<script>
+			function openFunction(evt, functionName) {
+				var i, tabcontent, tablinks;
+				tabcontent = document.getElementsByClassName("tabcontent");
+				for (i = 0; i < tabcontent.length; i++) {
+					tabcontent[i].style.display = "none";
+				}
+				tablinks = document.getElementsByClassName("tablinks");
+				for (i = 0; i < tablinks.length; i++) {
+					tablinks[i].className = tablinks[i].className.replace(
+							" active", "");
+				}
+				document.getElementById(functionName).style.display = "block";
+				evt.currentTarget.className += " active";
+			}
+		</script>
 </body>
-</html> 
+</html>
