@@ -18,7 +18,29 @@
 <script>
 	$(document).ready(function() {
 		$('#exampleModalCenter').modal('show');
+
+		$('.item1').click(function() {
+  			window.location.href="/home/articles";
+		});
+
+		$('.item2').click(function() {
+  			window.location.href="/home/subjects";
+		});
+
+		$('.item3').click(function() {
+  			window.location.href="http://localhost:8081/";
+		});
+
+		$('.item4').click(function() {
+  			window.location.href="/home/tips";
+		});
+
+		$('.item5').click(function() {
+  			window.location.href="/home/quiz";
+		});
+
 	});
+
 </script>
 <style>
 .grid-container {
@@ -37,6 +59,7 @@
 	text-align: left padding: 20px;
 	font-size: 30px;
 	height: 220px;
+	cursor: pointer;
 }
 
 .item1 {
