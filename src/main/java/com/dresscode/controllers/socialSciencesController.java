@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class socialSciencesController {
-	@GetMapping("/socialSciences")
+	@GetMapping("/home/subjects/socialSciences")
 	public String index() {
 		return "socialSciences";
 	}

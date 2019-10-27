@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class SubjectController {
-	@GetMapping("/subjects")
+	@GetMapping("home/subjects")
 	public String index() {
 		return "subjects";
 	}

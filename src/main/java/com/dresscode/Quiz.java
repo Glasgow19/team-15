@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,10 +25,13 @@ public class Quiz {
 	{
 		List<Question> questions = new ArrayList<Question>();
 		try {
-			byte[] content = resourceLoader.getResource("classpath:data/questions.json").getInputStream().readAllBytes();
+			File file = resourceLoader.getResource("classpath:data/questions.json").getFile();
+			byte[] content = new byte[(int) file.length()];
+			DataInputStream dis = new DataInputStream(new FileInputStream(file));
+			dis.readFully(content);
 			ObjectMapper mapper = new ObjectMapper();
 			questions =Arrays.asList(mapper.readValue(content, Question[].class));
-			
+
 			for(int i = 0 ; i < questions.size() ; i++) {
 				System.out.println(questions.get(i).getQuestion());
 				List<String> s = questions.get(i).getAnswers();

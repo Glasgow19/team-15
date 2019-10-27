@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class computingController {
-	@GetMapping("/computing")
+	@GetMapping("/home/subjects/computing")
 	public String index() {
 		return "computing";
 	}
