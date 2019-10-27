@@ -232,6 +232,10 @@ body {font-family: Arial, Helvetica, sans-serif;}
   opacity: 1;
 }
 
+.progress-bar {
+    background-color: #74529E;
+}
+
     </style>
 
 </head>
@@ -288,6 +292,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 <div class="form-popup" id="myForm">
     <form action="pollchoice.php" class="form-container" method="get">
         <h3>What's your favourite programming language?</h3>
+        <br>
         <div class="question">
             <input type="radio" name="question-1-answers" id="answer" value="A" />
             <label for="question-1-answers-A"> Java </label>
@@ -328,7 +333,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
                 51%
             </div>
         </div>
-
+        <br>
         <button type="submit" class="btn" onclick="submitForm(event)">Submit</button>
         <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
     </form>
