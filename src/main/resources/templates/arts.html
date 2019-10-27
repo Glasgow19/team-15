@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
 * {
 	box-sizing: border-box
@@ -55,6 +56,16 @@ body {
 	display: none;
 }
 
+.tabcontent2 {
+	float: left;
+	padding: 0px 12px;
+	width: 70%;
+	border-left: none;
+	height: 800px;
+	background: #eaeaea;
+	display: block;
+}
+
 /* Clear floats after the tab */
 .clearfix::after {
 	content: "";
@@ -71,14 +82,13 @@ body {
 <body>
 	<div class=body-container>
 		<div class="tab">
-			<button class="tablinks"
-				onmouseover="openFunction(event, 'Articles')">Articles</button>
+			<button class="tablinks active" onmouseover="openFunction(event, 'Articles')">Articles</button>
 			<button class="tablinks"
 				onmouseover="openFunction(event, 'Websites')">Websites</button>
 			<button class="tablinks" onmouseover="openFunction(event, 'Videos')">Videos</button>
 		</div>
 
-		<div id="Articles" class="tabcontent">
+		<div id="Articles" class="tabcontent2">
 			<h3>Articles</h3>
 
 			<div class="row" style="padding: 20">
@@ -184,9 +194,15 @@ body {
 			function openFunction(evt, functionName) {
 				var i, tabcontent, tablinks;
 				tabcontent = document.getElementsByClassName("tabcontent");
+				tabcontent2 = document.getElementsByClassName("tabcontent2");
 				for (i = 0; i < tabcontent.length; i++) {
 					tabcontent[i].style.display = "none";
 				}
+				
+				for (i = 0; i < tabcontent2.length; i++) {
+					tabcontent2[i].style.display = "none";
+				}
+				
 				tablinks = document.getElementsByClassName("tablinks");
 				for (i = 0; i < tablinks.length; i++) {
 					tablinks[i].className = tablinks[i].className.replace(
