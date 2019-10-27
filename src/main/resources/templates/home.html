@@ -17,8 +17,14 @@
 	crossorigin="anonymous"></script>
 <script>
 	$(document).ready(function() {
-		$('#exampleModalCenter').modal('show');
-
+	
+  		if(!sessionStorage.getItem('homePageAlreadyVisited'))//The first time this will be null
+    	{
+    	console.log('bla');
+      		sessionStorage.setItem('homePageAlreadyVisited', 'visited'); //foobar can be anything. You are just concerned about checking whether 'homePageAlreadyVisited' key has some value or not.
+      		$('#exampleModalCenter').modal('show');
+    	}
+	
 		$('.item1').click(function() {
   			window.location.href="/home/articles";
 		});
@@ -38,20 +44,19 @@
 		$('.item5').click(function() {
   			window.location.href="/home/quiz";
 		});
-
 	});
+	</script>
 
-</script>
 <style>
 .grid-container {
-	font-family: "Lucida Console", Monaco, monospace;
+	font-family: "Lucinda Console", Monaco, monospace;
 	display: grid;
 	grid-template-columns: auto auto auto;
-	grid-gap: 6px;
+	grid-gap: 5px;
 	background-color: #ffffff;
 	padding: 0px;
-	border-left: 80px solid white;
-	border-right: 80px solid white;
+	border-left: 120px solid white;
+	border-right: 120px solid white;
 }
 
 .grid-container>div {
@@ -67,26 +72,59 @@
 	grid-column-end: 3;
 	background-color: #a7358c;
 	position: relative;
+	opacity: 1;
+	transition: 0.4s;
+<!--  	transition: top ease 0.5s;-->
+}
+.item1:hover {
+	background: #a7358c;
+	opacity: 0.85;
+<!--	top: -8px;-->
 }
 
 .item2 {
 	background-color: #ed6b4b;
 	position: relative;
+	opacity: 1;
+	transition: 0.4s;
+}
+.item2:hover {
+	background: #ed6b4b;
+	opacity: 0.85;
 }
 
+
 .item3 {
-	background-color: #74529e;
+	background-color: #ED6B4B;
 	position: relative;
+	opacity: 1;
+	transition: 0.4s;
+}
+.item3:hover {
+	background: #ED6B4B;
+	opacity: 0.85;
 }
 
 .item4 {
 	background-color: #f9b222;
 	position: relative;
+	opacity: 1;
+	transition: 0.4s;
+}
+.item4:hover {
+	background: #f9b222;
+	opacity: 0.85;
 }
 
 .item5 {
 	background-color: #74529e;
 	position: relative;
+	opacity: 1;
+	transition: 0.4s;
+}
+.item5:hover {
+	background: #74529;
+	opacity: 0.85;
 }
 
 .topic-title {
@@ -111,8 +149,8 @@
 		aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="ModalCenterTitle">Fact of the day!</h5>
+				<div class="modal-header" style="background-color:#ed6b4b;">
+					<h5 class="modal-title" id="ModalCenterTitle" >Fact of the day!</h5>
 					<button type="button" class="close" data-dismiss="modal"
 						aria-label="Close">
 						<span aria-hidden="true">&times;</span>
@@ -121,16 +159,9 @@
 				<div class="modal-body">
 					<p th:text="${fact}" />
 				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary"
-						data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary">Save changes</button>
-				</div>
 			</div>
 		</div>
 	</div>
-
-
 	<div class="jumbotron jumbotron-fluid home-bg">
 		<div class="container" style="margin-left:4rem;">
 			<img src="../../Pictures/3. Logo/dressCODE_Final.png"
@@ -154,6 +185,14 @@
 		</div>
 		<div class="item5">
 			<div class="topic-title">Games</div>
+		</div>
+	</div>
+
+	<div class="card" style="width: 18rem; padding: 20">
+		<img class="card-img-top" src="..." alt="Card image cap">
+		<div class="card-body">
+			<h5 class="card-title">Karlie Kloss</h5>
+			<p class="card-text">Kode With Klossy creates learning  experiences and opportunities for young women that increase their confidence and inspire them to pursue their passions in a technology driven world.</p>
 		</div>
 	</div>
 

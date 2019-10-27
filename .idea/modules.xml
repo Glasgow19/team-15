@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/dressCode.iml" filepath="$PROJECT_DIR$/dressCode.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chat-demo/websocket-demo.iml" filepath="$PROJECT_DIR$/chat-demo/websocket-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/main/main.iml" filepath="$PROJECT_DIR$/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chat-demo/src/main/main1.iml" filepath="$PROJECT_DIR$/chat-demo/src/main/main1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chat-demo/src/test/test.iml" filepath="$PROJECT_DIR$/chat-demo/src/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/test/test1.iml" filepath="$PROJECT_DIR$/src/test/test1.iml" />
     </modules>
   </component>
 </project>
