@@ -1,4 +1,72 @@
 <html xmlns:th="http://www.thymeleaf.org">
+<<<<<<< HEAD
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+</head>
+<body>
+	<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="ModalCenterTitle">Fact of the day!</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <p th:text="${fact}" />
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Save changes</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="jumbotron jumbotron-fluid" style="background-color:#74529E;">
+  		<div class="container">
+    		<img src="../../Pictures/3. Logo/dressCODE_Final.png" alt="dressCode logo" style="width: 160;height:100;">
+    		<h1 class="display-4">Home</h1>
+    			<p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+  		</div>
+	</div>
+	<script>
+		$(document).ready(function(){
+			$('#exampleModalCenter').modal('show');
+		});
+	</script>
+		<div class="row" style="width:80rem;top:50rem; padding:20;">
+		  <div class="col-sm-4">
+		    <div class="card">
+		      <div class="card-body" style="background-color:#F9B222;">
+		        <a href="articles" class="card-title">Articles</a> 
+		        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="col-sm-4">
+		    <div class="card">
+		      <div class="card-body"  style="background-color:#ED6B4B;">
+		        <a href="home/subjects" class="card-title">Subjects integration with techonology</a> 
+		        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="col-sm-4" >
+		    <div class="card">
+		      <div class="card-body" style="background-color:#A7358C;">
+		        <a href="#" class="card-title">Games</a>
+		        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+</body>
+=======
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
               integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -82,4 +150,5 @@
         </div>
     </div>
     </body>
+>>>>>>> 59a4e0cc148f5e31d827b39f6bf3646c7d522943
 </html>

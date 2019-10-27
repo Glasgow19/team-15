@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class sciencesController {
-	@GetMapping("/sciences")
+	@GetMapping("/home/subjects/sciences")
 	public String index() {
 		return "sciences";
 	}
