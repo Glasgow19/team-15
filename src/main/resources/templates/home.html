@@ -17,8 +17,14 @@
 	crossorigin="anonymous"></script>
 <script>
 	$(document).ready(function() {
-		$('#exampleModalCenter').modal('show');
-
+	
+  		if(!sessionStorage.getItem('homePageAlreadyVisited'))//The first time this will be null
+    	{
+    	console.log('bla');
+      		sessionStorage.setItem('homePageAlreadyVisited', 'visited'); //foobar can be anything. You are just concerned about checking whether 'homePageAlreadyVisited' key has some value or not.
+      		$('#exampleModalCenter').modal('show');
+    	}
+	
 		$('.item1').click(function() {
   			window.location.href="/home/articles";
 		});
@@ -38,10 +44,9 @@
 		$('.item5').click(function() {
   			window.location.href="/home/quiz";
 		});
-
 	});
+	</script>
 
-</script>
 <style>
 .grid-container {
 	font-family: "Lucinda Console", Monaco, monospace;
@@ -124,8 +129,6 @@
 			</div>
 		</div>
 	</div>
-
-
 	<div class="jumbotron jumbotron-fluid home-bg">
 		<div class="container" style="margin-left:4rem;">
 			<img src="../../Pictures/3. Logo/dressCODE_Final.png"
