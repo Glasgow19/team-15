@@ -1,4 +1,4 @@
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -10,30 +10,25 @@
 <form action="/quizComp" method="post">
 
 <h3>"Let's Start the Quiz, Shall we ?"</h3>
-
+<p th:text="${Question}" /> 
 <label class="container">
   <input type="checkbox" checked="checked">
+  <p th:text="${Answers1}" /> 
   <span class="checkmark"></span>
 </label>
 
 <label class="container">
   <input type="checkbox">
+  <p th:text="${Answers2}" /> 
   <span class="checkmark"></span>
 </label>
 
 <label class="container">
   <input type="checkbox">
+  <p th:text="${Answers3}" /> 
   <span class="checkmark"></span>
 </label>
 
-<label class="container">Four
-  <input type="checkbox">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Five
-  <input type="checkbox">
-  <span class="checkmark"></span>
-</label>
 <button type="submit">Submit</button>
 </form>
 </body>
