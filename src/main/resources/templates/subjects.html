@@ -1,42 +1,151 @@
 <!DOCTYPE html>
-<html>
-<div class="header">
-  <h1>Header</h1>
- <img src="../../Pictures/3. Logo/dressCODE_Final.png" alt="dressCode logo" style="width: 160;height:100;">
-</div>
-
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Add icon library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <style>
+        .content {padding:20px;}
+        .btn {
+          background-color: #74529E;
+          border: none;
+          color: White;
+          padding: 100px 100px;
+          font-size: 16px;
+          margin-bottom: 15px;
+          cursor: pointer;
+          border-radius: 50%;
+        }
+        .btn:hover {
+          background-color: #A7358C;
+        }
+        .btn1 {
+          background-color: #ED6B4B;
+          border: none;
+          color: White;
+          padding: 100px 100px;
+          font-size: 16px;
+          margin-bottom: 15px;
+          cursor: pointer;
+          border-radius: 50%;
+        }
+        .btn1:hover {
+          background-color: #A7358C;
+          }
+        .btn2 {
+          background-color: #F9B222;
+          border: none;
+          color: White;
+          padding: 100px 100px;
+          font-size: 16px;
+          margin-bottom: 15px;
+          cursor: pointer;
+          border-radius: 50%;
+          }
+        .btn2:hover {
+          background-color: #A7358C;
+        }
+         .btn3 {
+          background-color: #74529E;
+          border: none;
+          color: White;
+          padding: 100px 100px;
+          font-size: 16px;
+          margin-bottom: 15px;
+          cursor: pointer;
+          border-radius: 50%;
+          }
+          .btn3:hover {
+          background-color: #A7358C;
+          }
 
-<style>
-.btn {
-  background-color: #74529E;
-  border: none;
-  color: White;
-  padding: 100px 100px;
-  font-size: 16px;
-  cursor: pointer;
-}
+         .btn4 {
+          background-color: #ED6B4B;
+          border: none;
+          color: White;
+          padding: 100px 100px;
+          font-size: 16px;
+          margin-bottom: 15px;
+          cursor: pointer;
+          border-radius: 50%;
+          }
+         .btn4:hover {
+          background-color: #A7358C;
+          }
 
-/* Lighter background on mouse-over */
-.btn:hover {                                                                                                                                                                                                                                                                                                                                       
-  background-color: #A7358C';
-}
-</style>
+         .btn5 {
+          background-color: #F9B222;
+          border: none;
+          color: White;
+          padding: 100px 100px;
+          font-size: 16px;
+          margin-bottom: 15px;
+          cursor: pointer;
+          border-radius: 50%;
+          }
+         .btn5:hover {
+          background-color: #A7358C;
+          }
+
+         .btn6 {
+          background-color: #ED6B4B;
+          border: none;
+          color: White;
+          padding: 100px 100px;
+          font-size: 16px;
+          margin-bottom: 15px;
+          cursor: pointer;
+          border-radius: 50%;
+          }
+          .btn6:hover {
+          background-color: #A7358C;
+          }
+        body {
+          font-family:  "Lucinda Console", Monaco, monospace;
+          margin: 0;
+        }
+        /* Header/Logo Title */
+        .header {
+          padding: 60px;
+          text-align: center;
+          background: #74529E;
+          color: #74529E;
+          font-size: 30px;
+          margin-bottom: 30px;
+          border-radius: 3.5px;
+        }
+        .container {
+          text-align: center;
+          font-size: 30
+        }
+    </style>
 </head>
 <body>
-
-
- <button class = "btn" onclick="window.location.href = 'music.html';"><i class="fa fa-music"></i> Music</button>
-<button class = "btn" onclick="window.location.href = 'arts.html';"><i class="fa fa-paint-brush"></i> Art & Design</button>
-<button class = "btn" onclick="window.location.href = 'sciences.html';"><i class="fa fa-cogs"></i> Science & Engineering</button>
-<button class = "btn" onclick="window.location.href = 'mathematics.html';"><i class="fa fa-calculator"></i> Maths </button>
-<button class = "btn" onclick="window.location.href = 'socialSciences.html';"><i class="fas fa-chart-line"></i> Social Sciences</button>
-<button class = "btn" onclick="window.location.href = 'sports.html';"><i class="fas fa-futbol"></i> Sports</button>
-<button class = "btn" onclick="window.location.href = 'computing.html';"><i class="fas fa-desktop"></i> Computing</button>
-
+    <div class="header">
+      <h1></h1>
+     <img src="../../Pictures/3. Logo/dressCODE_Final.png" alt="dressCode logo" style="width: 500;height: 180;">
+    </div>
+    <div class="container">
+        <a href="subjects/music"><button class = "btn"><i class="fa fa-music"></i> Music</button></a>
+        <a href="subjects/arts"><button class = "btn1"><i class="fa fa-paint-brush"></i> Art & Design</button></a>
+        <a href="subjects/sciences"><button class = "btn2"><i class="fa fa-cogs"></i> Science & Engineering</button></a>
+        <a href="subjects/mathematics"><button class = "btn3"><i class="fa fa-calculator"></i> Maths </button></a>
+        <a href="subjects/socialSciences"><button class = "btn4"><i class="fas fa-chart-line"></i> Social Sciences</button></a>
+        <a href="subjects/sports"><button class = "btn5"><i class="fas fa-futbol"></i> Sports</button></a>
+        <a href="subjects/computing"><button class = "btn6"><i class="fas fa-desktop"></i> Computing</button></a>
+    </div>
 </body>
 </html>
