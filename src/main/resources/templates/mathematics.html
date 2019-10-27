@@ -8,11 +8,11 @@ body {font-family: "Lucida Console", Monaco, monospace;}
 
 /* Style the tab */
 .tab {
-  float: left;
+  float: Left;
   border: 1px solid #A7358C;
   background-color: #A7358C;
   width: 30%;
-  height: 300px;
+  height: 800px;
 }
 
 /* Style the buttons inside the tab */
@@ -46,7 +46,7 @@ body {font-family: "Lucida Console", Monaco, monospace;}
   border: 1px solid #A7358C;
   width: 70%;
   border-left: none;
-  height: 300px;
+  height: 800px;
   display: none;
 }
 
@@ -60,12 +60,9 @@ body {font-family: "Lucida Console", Monaco, monospace;}
 </head>
 <body>
 
-<h2>Hover Tabs</h2>
-<p>Move the mouse over a button inside the tabbed menu:</p>
-
 <div class="tab">
   <button class="tablinks" onmouseover="openFunction(event, 'Articles')">Articles</button>
-  <button class="tablinks" onmouseover="openFunction(event, 'Events')">Events</button>
+  <button class="tablinks" onmouseover="openFunction(event, 'Websites')">Websites</button>
   <button class="tablinks" onmouseover="openFunction(event, 'Videos')">Videos</button>
 </div>
 
@@ -74,8 +71,8 @@ body {font-family: "Lucida Console", Monaco, monospace;}
   <p></p>
 </div>
 
-<div id="Events" class="tabcontent">
-  <h3>Events</h3>
+<div id="Websites" class="tabcontent">
+  <h3>Websites</h3>
   <p></p> 
 </div>
 

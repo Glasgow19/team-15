@@ -3,104 +3,204 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-* {box-sizing: border-box}
-body {font-family: "Lucida Console", Monaco, monospace;}
+* {
+	box-sizing: border-box
+}
+
+body {
+	font-family: "Lucida Console", Monaco, monospace;
+}
 
 /* Style the tab */
 .tab {
-  float: left;
-  border: 1px solid #A7358C;
-  background-color: #A7358C;
-  width: 30%;
-  height: 300px;
+	float: Left;
+	background-color: #A7358C;
+	width: 30%;
+	height: 800px;
 }
 
 /* Style the buttons inside the tab */
 .tab button {
-  display: block;
-  background-color: #A7358C;
-  color: white;
-  padding: 22px 16px;
-  width: 100%;
-  border: none;
-  outline: none;
-  text-align: left;
-  cursor: pointer;
-  font-size: 17px;
+	display: block;
+	background-color: #A7358C;
+	color: white;
+	padding: 22px 16px;
+	width: 100%;
+	border: none;
+	outline: none;
+	text-align: left;
+	cursor: pointer;
+	font-size: 17px;
+	font-family: "Lucida Console", Monaco, monospace;
 }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  background-color: #A7358C;
+	background-color: #A7358C;
 }
 
 /* Create an active/current "tab button" class */
 .tab button.active {
-  background-color: #74529E;
+	background-color: #74529E;
 }
 
 /* Style the tab content */
 .tabcontent {
-  float: left;
-  padding: 0px 12px;
-  border: 1px solid #A7358C;
-  width: 70%;
-  border-left: none;
-  height: 300px;
-  display: none;
+	float: left;
+	padding: 0px 12px;
+	width: 70%;
+	border-left: none;
+	height: 800px;
+	background: #eaeaea;
+	display: none;
 }
 
 /* Clear floats after the tab */
 .clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.body-container {
+	border: 2.5px solid #A7358C;
+	border-radius: 5px;
 }
 </style>
 </head>
 <body>
+	<div class=body-container>
+		<div class="tab">
+			<button class="tablinks"
+				onmouseover="openFunction(event, 'Articles')">Articles</button>
+			<button class="tablinks"
+				onmouseover="openFunction(event, 'Websites')">Websites</button>
+			<button class="tablinks" onmouseover="openFunction(event, 'Videos')">Videos</button>
+		</div>
 
-<h2>Hover Tabs</h2>
-<p>Move the mouse over a button inside the tabbed menu:</p>
+		<div id="Articles" class="tabcontent">
+			<h3>Articles</h3>
 
-<div class="tab">
-  <button class="tablinks" onmouseover="openFunction(event, 'Articles')">Articles</button>
-  <button class="tablinks" onmouseover="openFunction(event, 'Events')">Events</button>
-  <button class="tablinks" onmouseover="openFunction(event, 'Videos')">Videos</button>
-</div>
+			<div class="row" style="padding: 20">
+				<div class="col-sm-4">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Computing Science and ESPN: Sports
+								and technology collide</h5>
+							<p class="card-text">After a computing science professor has
+								an awakening and feels like she lost her passion for technology,
+								she regains it again after being fascinated by the world of
+								real-time special effects in sports matches in which she can
+								employ her computing skills and work with something she's truly
+								interested in, sports.</p>
+							<a href="http://www.clunk.org.uk/computers-in-sports.html"
+								class="btn btn-primary" style="background-color: #eaeaea">Read
+								more</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">There aren't many jobs that don't use
+								computers- The use of computers in sports</h5>
+							<p class="card-text">In this article, the use of technology
+								in sports is explored and put into bullet points, explaining the
+								role of tech in the most crucial fields of sports.</p>
+							<a
+								href="https://www.tes.com/news/sqa-results-2019-higher-computing-entries-fall-21"
+								class="btn btn-primary" style="background-color: #eaeaea">Read
+								more</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Science is creating super-athletes —
+								and making sports unrecognizable to previous generations</h5>
+							<p class="card-text">The use of technology and science in
+								collaboration with sports has been found to have a remarkable
+								effect on the athletes themselves, making these two fields seem
+								extremely powerful.</p>
+							<a
+								href="https://www.businessinsider.com/how-science-and-technology-are-changing-sports-2015-8?r=US&IR=T"
+								class="btn btn-primary" style="background-color: #eaeaea">Read
+								more</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			</p>
+		</div>
 
-<div id="Articles" class="tabcontent">
-  <h3>Articles</h3>
-  <p></p>
-</div>
+		<div id="Websites" class="tabcontent">
+			<h3>Websites</h3>
+			<p>
+			<div class="row" style="padding: 20">
+				<div class="col-sm-4">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">SportsAnalysis</h5>
+							<p class="card-text">This is a web app that teaches coaches
+								how to code sports performance analysis and use their technical
+								skills to obtain crucial data for their trainees.</p>
+							<a href="isportsanalysis.com/sport-performance-analysis.php"
+								style="background-color: #eaeaea">Read more</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">CodeHS</h5>
+							<p class="card-text">Coding + Sports is a mini-course that
+								introduces students to the basics of coding through sports! In
+								this block-coding course, students develop their own sports
+								video games and simulations using code.</p>
+							<a href="https://codehs.com/info/curriculum/coding_sports"
+								class="btn btn-primary" style="background-color: #eaeaea">Read
+								more</a>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-<div id="Events" class="tabcontent">
-  <h3>Events</h3>
-  <p></p> 
-</div>
+				<div id="Videos" class="tabcontent">
+					<h3>Videos</h3>
+					<p>
+						<iframe width="250" height="250"
+							src="https://www.youtube.com/embed/LX-mNeJApxo" frameborder="0"
+							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen></iframe>
 
-<div id="Videos" class="tabcontent">
-  <h3>Videos</h3>
-  <p></p>
-</div>
+						<iframe width="250" height="250"
+							src="https://www.youtube.com/embed/7petHPQOfgU" frameborder="0"
+							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen></iframe>
 
-<div class="clearfix"></div>
+					</p>
+				</div>
 
-<script>
-function openFunction(evt, functionName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(functionName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-</script>
-   
+				<div class="clearfix"></div>
+
+				<script>
+					function openFunction(evt, functionName) {
+						var i, tabcontent, tablinks;
+						tabcontent = document
+								.getElementsByClassName("tabcontent");
+						for (i = 0; i < tabcontent.length; i++) {
+							tabcontent[i].style.display = "none";
+						}
+						tablinks = document.getElementsByClassName("tablinks");
+						for (i = 0; i < tablinks.length; i++) {
+							tablinks[i].className = tablinks[i].className
+									.replace(" active", "");
+						}
+						document.getElementById(functionName).style.display = "block";
+						evt.currentTarget.className += " active";
+					}
+				</script>
 </body>
-</html> 
+</html>
