@@ -1,70 +1,71 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <link rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-          crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-    <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-    <script
-            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
-    <script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+	integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+	crossorigin="anonymous"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+	integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	crossorigin="anonymous"></script>
+<script>
 	$(document).ready(function() {
-	
-  		if(!sessionStorage.getItem('homePageAlreadyVisited'))//The first time this will be null
-    	{
-    	console.log('bla');
-      		sessionStorage.setItem('homePageAlreadyVisited', 'visited'); //foobar can be anything. You are just concerned about checking whether 'homePageAlreadyVisited' key has some value or not.
-      		$('#exampleModalCenter').modal('show');
-    	}
-	
+
+		if (!sessionStorage.getItem('homePageAlreadyVisited'))//The first time this will be null
+		{
+			console.log('bla');
+			sessionStorage.setItem('homePageAlreadyVisited', 'visited'); //foobar can be anything. You are just concerned about checking whether 'homePageAlreadyVisited' key has some value or not.
+			$('#exampleModalCenter').modal('show');
+		}
+
 		$('.item1').click(function() {
-  			window.location.href="/home/articles";
+			window.location.href = "/home/articles";
 		});
 
 		$('.item2').click(function() {
-  			window.location.href="/home/subjects";
+			window.location.href = "/home/subjects";
 		});
 
 		$('.item3').click(function() {
-  			window.location.href="http://localhost:8081/";
+			window.location.href = "http://localhost:8081/";
 		});
 
 		$('.item4').click(function() {
-  			window.location.href="/home/tips";
+			window.location.href = "/home/tips";
 		});
 
 		$('.item5').click(function() {
-  			window.location.href="/home/quiz";
+			window.location.href = "/home/quiz";
 		});
 	});
 
-			function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
-
-function submitForm() {
-	event.preventDefault();
-	let elements = document.getElementsByClassName("progress");
-	for (let i = 0; i < elements.length; i++) {
-		elements[i].style.display = 'block';
+	function openForm() {
+		document.getElementById("myForm").style.display = "block";
 	}
-}
 
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-}
+	function submitForm() {
+		event.preventDefault();
+		let elements = document.getElementsByClassName("progress");
+		for (let i = 0; i < elements.length; i++) {
+			elements[i].style.display = 'block';
+		}
+	}
 
-
-    </script>
-    <style>
+	function closeForm() {
+		document.getElementById("myForm").style.display = "none";
+	}
+</script>
+<style>
 .grid-container {
 	font-family: "Lucinda Console", Monaco, monospace;
 	display: grid;
@@ -90,13 +91,16 @@ function closeForm() {
 	background-color: #a7358c;
 	position: relative;
 	opacity: 1;
-	transition: 0.4s;
-<!--  	transition: top ease 0.5s;-->
+	transition: 0.4s; <!--
+	transition: top ease 0.5s;
+	-->
 }
+
 .item1:hover {
 	background: #a7358c;
-	opacity: 0.85;
-<!--	top: -8px;-->
+	opacity: 0.85; <!--
+	top: -8px;
+	-->
 }
 
 .item2 {
@@ -105,11 +109,11 @@ function closeForm() {
 	opacity: 1;
 	transition: 0.4s;
 }
+
 .item2:hover {
 	background: #ed6b4b;
 	opacity: 0.85;
 }
-
 
 .item3 {
 	background-color: #ED6B4B;
@@ -117,6 +121,7 @@ function closeForm() {
 	opacity: 1;
 	transition: 0.4s;
 }
+
 .item3:hover {
 	background: #ED6B4B;
 	opacity: 0.85;
@@ -128,6 +133,7 @@ function closeForm() {
 	opacity: 1;
 	transition: 0.4s;
 }
+
 .item4:hover {
 	background: #f9b222;
 	opacity: 0.85;
@@ -139,6 +145,7 @@ function closeForm() {
 	opacity: 1;
 	transition: 0.4s;
 }
+
 .item5:hover {
 	background: #74529;
 	opacity: 0.85;
@@ -152,203 +159,229 @@ function closeForm() {
 
 .home-bg {
 	background-image: url(images/picc.jpg);
-    background-size: 877px auto;
-    background-repeat: no-repeat;
-    background-position: right;
-    background-color: #74529e;
+	background-size: 877px auto;
+	background-repeat: no-repeat;
+	background-position: right;
+	background-color: #74529e;
 }
 
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
 
-
-
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
+* {
+	box-sizing: border-box;
+}
 
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
-  background-color: #74529E;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  opacity: 0.8;
-  position: absolute;
-  bottom: 23px;
-  width: 280px;
-  float: left;
+	background-color: #74529E;
+	color: white;
+	padding: 16px 20px;
+	border: none;
+	cursor: pointer;
+	opacity: 0.8;
+	position: absolute;
+	bottom: 23px;
+	width: 280px;
+	float: left;
 }
 
 /* The popup form - hidden by default */
 .form-popup {
-  display: none;
-  position: absolute;
-  bottom: 0;
-  width: 280px;
-  border: 3px solid #f1f1f1;
-  z-index: 9;
+	display: none;
+	position: absolute;
+	bottom: 0;
+	width: 280px;
+	border: 3px solid #f1f1f1;
+	z-index: 9;
 }
 
 /* Add styles to the form container */
 .form-container {
-  max-width: 300px;
-  padding: 10px;
-  background-color: white;
+	max-width: 300px;
+	padding: 10px;
+	background-color: white;
 }
 
 /* DONT NEED Full-width input fields  */
 .form-container input[type=text], .form-container input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
+	width: 100%;
+	padding: 15px;
+	margin: 5px 0 22px 0;
+	border: none;
+	background: #f1f1f1;
 }
 
 /* When the inputs get focus, do something */
-.form-container input[type=text]:focus, .form-container input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
+.form-container input[type=text]:focus, .form-container input[type=password]:focus
+	{
+	background-color: #ddd;
+	outline: none;
 }
 
 /* Set a style for the submit/login button */
 .form-container .btn {
-  background-color: #ED6B4B;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  margin-bottom:10px;
-  opacity: 0.8;
+	background-color: #ED6B4B;
+	color: white;
+	padding: 16px 20px;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	margin-bottom: 10px;
+	opacity: 0.8;
 }
 
 /* Add a red background color to the cancel button */
 .form-container .cancel {
-  background-color: #74529E;
+	background-color: #74529E;
 }
 
 /* Add some hover effects to buttons */
 .form-container .btn:hover, .open-button:hover {
-  opacity: 1;
+	opacity: 1;
 }
 
 .progress-bar {
-    background-color: #74529E;
+	background-color: #74529E;
 }
 
-    </style>
+.fa {
+	padding: 20px;
+	font-size: 15px;
+	width: 12px;
+	height: 12px;
+	text-align: center;
+	text-decoration: none;
+	margin: 5px 2px;
+	float: right;
+	border-radius: 50%;
+}
+
+.fa:hover {
+	opacity: 0.7;
+}
+
+.fa-twitter {
+	background: #52585e;
+	color: white;
+	margin-right: 20px;
+}
+
+.fa-linkedin {
+	background: #52585e;
+	color: white;
+}
+
+.fa-instagram {
+	background: #52585e;
+	color: white;
+}
+</style>
 
 </head>
 <body>
 
-<div class="modal fade" id="exampleModalCenter" tabindex="-1"
-     role="dialog" aria-labelledby="exampleModalCenterTitle"
-     aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header" style="background-color:#74529e;">
-                <h5 class="modal-title" id="ModalCenterTitle">Fact of the day!</h5>
-                <button type="button" class="close" data-dismiss="modal"
-                        aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p th:text="${fact}"/>
-            </div>
-        </div>
-    </div>
-</div>
+	<div class="modal fade" id="exampleModalCenter" tabindex="-1"
+		role="dialog" aria-labelledby="exampleModalCenterTitle"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header" style="background-color: #74529e;">
+					<h5 class="modal-title" id="ModalCenterTitle">Fact of the day!</h5>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p th:text="${fact}" />
+				</div>
+			</div>
+		</div>
+	</div>
 
 
-<div class="jumbotron jumbotron-fluid home-bg">
-    <div class="container" style="margin-left:4rem;">
-        <img src="../../Pictures/3. Logo/dressCODE_Final.png"
-             alt="dressCode logo" style="width: 400px;">
-    </div>
-</div>
+	<div class="jumbotron jumbotron-fluid home-bg">
+		<div class="container" style="margin-left: 4rem;">
+			<img src="../../Pictures/3. Logo/dressCODE_Final.png"
+				alt="dressCode logo" style="width: 400px;">
+		</div>
+	</div>
 
 
-<div class="grid-container">
-    <div class="item1">
-        <div class="topic-title">Articles</div>
-    </div>
-    <div class="item2">
-        <div class="topic-title">Interests</div>
-    </div>
-    <div class="item3">
-        <div class="topic-title">Networking</div>
-    </div>
-    <div class="item4">
-        <div class="topic-title">Tips</div>
-    </div>
-    <div class="item5">
-        <div class="topic-title">Games</div>
-    </div>
-</div>
+	<div class="grid-container">
+		<div class="item1">
+			<div class="topic-title">Articles</div>
+		</div>
+		<div class="item2">
+			<div class="topic-title">Interests</div>
+		</div>
+		<div class="item3">
+			<div class="topic-title">Networking</div>
+		</div>
+		<div class="item4">
+			<div class="topic-title">Tips</div>
+		</div>
+		<div class="item5">
+			<div class="topic-title">Games</div>
+		</div>
+	</div>
 
 
-<button class="open-button" onclick="openForm()">Poll of the day</button>
-<div class="form-popup" id="myForm">
-    <form action="pollchoice.php" class="form-container" method="get">
-        <h3>What's your favourite programming language?</h3>
-        <br>
-        <div class="question">
-            <input type="radio" name="question-1-answers" id="answer" value="A" />
-            <label for="question-1-answers-A"> Java </label>
-        </div>
-        <div class="progress" style="display: none;">
-            <div class="progress-bar" role="progressbar" aria-valuenow="70"
-                 aria-valuemin="0" aria-valuemax="100" style="width:12%">
-                12%
-            </div>
-        </div>
-        <div class="question">
-            <input type="radio" name="question-1-answers" id="answer" value="B" />
-            <label for="question-1-answers-A"> C# </label>
-        </div>
-        <div class="progress" style="display: none;">
-            <div class="progress-bar" role="progressbar" aria-valuenow="70"
-                 aria-valuemin="0" aria-valuemax="100" style="width:28%">
-                28%
-            </div>
-        </div>
-        <div class="question">
-            <input type="radio" name="question-1-answers" id="answer" value="C" />
-            <label for="question-1-answers-A"> Haskell </label>
-        </div>
-        <div class="progress" style="display: none;">
-            <div class="progress-bar" role="progressbar" aria-valuenow="70"
-                 aria-valuemin="0" aria-valuemax="100" style="width:9%">
-                9%
-            </div>
-        </div>
-        <div class="question">
-            <input type="radio" name="question-1-answers" id="answer" value="D" />
-            <label for="question-1-answers-A"> Python </label>
-        </div>
-        <div class="progress" style="display: none;">
-            <div class="progress-bar" role="progressbar" aria-valuenow="70"
-                 aria-valuemin="0" aria-valuemax="100" style="width:51%">
-                51%
-            </div>
-        </div>
-        <br>
-        <button type="submit" class="btn" onclick="submitForm(event)">Submit</button>
-        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-    </form>
-</div>
+	<button class="open-button" onclick="openForm()">Poll of the
+		day</button>
+	<div class="form-popup" id="myForm">
+		<form action="pollchoice.php" class="form-container" method="get">
+			<h3>What's your favourite programming language?</h3>
+			<br>
+			<div class="question">
+				<input type="radio" name="question-1-answers" id="answer" value="A" />
+				<label for="question-1-answers-A"> Java </label>
+			</div>
+			<div class="progress" style="display: none;">
+				<div class="progress-bar" role="progressbar" aria-valuenow="70"
+					aria-valuemin="0" aria-valuemax="100" style="width: 12%">12%
+				</div>
+			</div>
+			<div class="question">
+				<input type="radio" name="question-1-answers" id="answer" value="B" />
+				<label for="question-1-answers-A"> C# </label>
+			</div>
+			<div class="progress" style="display: none;">
+				<div class="progress-bar" role="progressbar" aria-valuenow="70"
+					aria-valuemin="0" aria-valuemax="100" style="width: 28%">28%
+				</div>
+			</div>
+			<div class="question">
+				<input type="radio" name="question-1-answers" id="answer" value="C" />
+				<label for="question-1-answers-A"> Haskell </label>
+			</div>
+			<div class="progress" style="display: none;">
+				<div class="progress-bar" role="progressbar" aria-valuenow="70"
+					aria-valuemin="0" aria-valuemax="100" style="width: 9%">9%</div>
+			</div>
+			<div class="question">
+				<input type="radio" name="question-1-answers" id="answer" value="D" />
+				<label for="question-1-answers-A"> Python </label>
+			</div>
+			<div class="progress" style="display: none;">
+				<div class="progress-bar" role="progressbar" aria-valuenow="70"
+					aria-valuemin="0" aria-valuemax="100" style="width: 51%">51%
+				</div>
+			</div>
+			<br>
+			<button type="submit" class="btn" onclick="submitForm(event)">Submit</button>
+			<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+		</form>
+	</div>
 
 
 
-<!--	<div class="card" style="width: 18rem; padding: 20">-->
-<!--		<img class="card-img-top" src="..." alt="Card image cap">-->
-<!--		<div class="card-body">-->
-<!--			<h5 class="card-title">Karlie Kloss</h5>-->
-<!--			<p class="card-text">Kode With Klossy creates learning  experiences and opportunities for young women that increase their confidence and inspire them to pursue their passions in a technology driven world.</p>-->
-<!--		</div>-->
-<!--	</div>-->
-
+<a href="https://twitter.com/dressCodeHQ" class="fa fa-twitter"></a>
+<a href="http://www.linkedin.com/company/dresscodehq" class="fa fa-linkedin"></a>
+<a href="https://www.instagram.com/dresscodehq/" class="fa fa-instagram"></a>
+     
 
 
 </body>
