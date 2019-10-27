@@ -1,10 +1,11 @@
 package com.dresscode;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class Question {
 	private String question;
-	
+
 	public String getQuestion() {
 		return question;
 	}
@@ -31,7 +32,9 @@ public class Question {
 
 	private List<String> answers;
 	private int correctAnswer;
-	
-	public Question() {
+
+	public List<String> getrightAnswers() {
+		List<String> result = Arrays.asList("Yes", "Yes", "Both Alike", "Madam Ada Lovelace", "Interconnected Network");
+		return result;
 	}
 }
