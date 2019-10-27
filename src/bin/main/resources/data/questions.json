@@ -1,0 +1,43 @@
+[
+	{
+	
+		"question": "Q-1. Do you think there is  a good future in terms of career in Computer Science ?",
+		"answers": [
+			"Yes",
+			"No",
+			"Don't Know"
+		]		
+	},
+	{
+		"question" : "Q-2. Would you encourage your kid to take Computer Science as a career ?",
+		"answers": [
+			"Yes",
+			"No",
+			"Don't Know"
+			]
+	},
+	{
+		"question" : "Q-3. Would you encourage you boy or your girl more in the field of Computer Science ?",
+		"answers": [
+			"Boy",
+			"Girl",
+			"Both Alike"
+			]		
+	},
+	{
+		"question" : "Q-4. Who wrote the first ever piece of code ? ",
+		"answers":[
+			"Charles Babbage",
+			"Madam Ada Lovelace",	
+			"Alan Turing"
+			]
+	},
+	{
+		"question" : "Q-5. What is the full form of Internet? ",
+		"answers":[
+			"Interconnected Network",
+			"InterClass Networking",
+			"Interrelated Network"
+			]
+	}
+]
